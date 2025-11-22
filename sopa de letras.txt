@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sopa de Letras de Comida</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Sopa de Letras de Comida</h1>
+        <div id="wordSearchGrid" class="grid-container"></div>
+        <div class="separator"></div>
+        <h2>Palabras a Encontrar:</h2>
+        <ul id="wordList"></ul>
+        <button id="newGameButton">Nueva Partida</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

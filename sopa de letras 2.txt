@@ -1,0 +1,136 @@
+body {
+    font-family: 'Arial', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    background-color: #f0f0f0;
+    color: #333;
+}
+
+.container {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    max-width: 90%;
+    margin: 20px;
+}
+
+h1 {
+    color: #4CAF50;
+    margin-bottom: 20px;
+}
+
+h2 {
+    color: #555;
+    margin-top: 30px;
+    margin-bottom: 15px;
+}
+
+.grid-container {
+    display: grid;
+    /* Ajusta el tamaño de la cuadrícula dinámicamente */
+    grid-template-columns: repeat(var(--grid-cols), 1fr); 
+    gap: 1px; /* Espacio mínimo entre celdas */
+    border: 2px solid #ccc;
+    background-color: #eee;
+    margin: 0 auto;
+    max-width: fit-content; /* Para que la cuadrícula no sea demasiado ancha */
+}
+
+.grid-cell {
+    width: 30px; /* Tamaño fijo de la celda */
+    height: 30px; /* Tamaño fijo de la celda */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.1em;
+    font-weight: bold;
+    color: #333;
+    background-color: #fdfdfd;
+    cursor: pointer;
+    transition: background-color 0.1s ease;
+    border: 1px solid #e0e0e0; /* Bordes suaves entre celdas */
+}
+
+/* Marcado temporal al seleccionar (Color A) */
+.grid-cell.selected {
+    background-color: #ffe082; /* Amarillo claro */
+    color: #444;
+}
+
+/* Marcado permanente de palabra encontrada (Color B) */
+.grid-cell.found {
+    background-color: #81c784; /* Verde claro */
+    color: #fff;
+}
+
+#wordList {
+    list-style: none;
+    padding: 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); /* 2 columnas o más si cabe */
+    gap: 10px;
+    margin-top: 20px;
+}
+
+#wordList li {
+    display: flex;
+    align-items: center;
+    background-color: #e8f5e9; /* Fondo suave para las palabras */
+    padding: 8px 12px;
+    border-radius: 5px;
+    font-size: 1.1em;
+    color: #388e3c; /* Verde más oscuro */
+    font-weight: bold;
+}
+
+#wordList li.found-word {
+    text-decoration: line-through;
+    color: #a5d6a7; /* Color más tenue cuando está encontrada */
+    background-color: #f1f8e9;
+}
+
+.checkbox {
+    width: 20px;
+    height: 20px;
+    border: 2px solid #4CAF50;
+    border-radius: 4px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 10px;
+    flex-shrink: 0; /* Evita que el checkbox se encoja */
+}
+
+.checkbox.checked {
+    background-color: #4CAF50;
+    color: #fff;
+    font-size: 1.2em;
+}
+
+#newGameButton {
+    background-color: #2196F3;
+    color: white;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1.1em;
+    margin-top: 30px;
+    transition: background-color 0.3s ease;
+}
+
+#newGameButton:hover {
+    background-color: #1976D2;
+}
+
+.separator {
+    width: 100%;
+    height: 1px;
+    background-color: #eee;
+    margin: 30px 0;
+}
